@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.Login">
+
+    <!-- Imagen -->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:layout_constraintTop_toTopOf="@id/main"
+        app:layout_constraintBottom_toTopOf="@id/mainCentrado"
+        app:layout_constraintStart_toStartOf="@+id/mainCentrado"
+        app:layout_constraintEnd_toEndOf="@+id/mainCentrado"
+        android:src="@drawable/login"
+        android:tint="@color/md_theme_primary">
+
+    </com.google.android.material.imageview.ShapeableImageView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/mainCentrado"
+        app:layout_constraintTop_toTopOf="@id/main"
+        app:layout_constraintBottom_toBottomOf="@id/main"
+        android:layout_margin="10dp">
+
+
+        <!-- Campo usuario -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/usuario"
+            app:layout_constraintTop_toTopOf="@id/mainCentrado"
+            app:layout_constraintStart_toStartOf="@+id/mainCentrado"
+            app:layout_constraintEnd_toEndOf="@+id/mainCentrado"
+            android:padding="5dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@id/tietUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Campo contraseña -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilContrasena"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/strContrasena"
+            app:layout_constraintTop_toBottomOf="@id/tilUsuario"
+            app:layout_constraintStart_toStartOf="@+id/mainCentrado"
+            app:layout_constraintEnd_toEndOf="@+id/mainCentrado"
+            android:padding="5dp"
+            app:endIconMode="password_toggle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@id/tietContrasena"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- TextView Crear cuenta -->
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvYaTengo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tilContrasena"
+            app:layout_constraintStart_toStartOf="@id/mainCentrado"
+            app:layout_constraintEnd_toEndOf="@id/mainCentrado"
+            android:text="@string/strCrearCuenta"
+            android:textStyle="bold"
+            android:textSize="@dimen/tamanoLetra"
+            android:textColor="@color/md_theme_tertiary"
+            android:padding="15dp"
+            android:focusable="true"
+            android:clickable="true"
+            android:onClick="tvCrearCuenta">
+
+        </com.google.android.material.textview.MaterialTextView>
+
+        <!-- Boton -->
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tvYaTengo"
+            app:layout_constraintStart_toStartOf="@+id/mainCentrado"
+            app:layout_constraintEnd_toEndOf="@+id/mainCentrado"
+            android:text="@string/textoBotonLogin"
+            android:padding="5dp"
+            android:onClick="btnIniciarSesion"
+            android:textSize="@dimen/tamanoLetra"
+            android:textColor="@color/md_theme_onPrimary"
+            android:backgroundTint="@color/md_theme_primary">
+
+        </com.google.android.material.button.MaterialButton>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

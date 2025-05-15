@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Formulario</string>
+    <string name="strUsuario">Usuario</string>
+    <string name="usuario">Usuario</string>
+    <string name="strContrasena">Contraseña</string>
+    <string name="textoBotonLogin">Iniciar sesión</string>
+    <string name="strCrearCuenta">Crear cuenta</string>
+    <string name="strYaTengoCuenta">Ya tengo cuenta</string>
+    <string name="strContrasena2">Repetir contraseña</string>
+    <string name="strCorreo">Correo</string>
+    <string name="strFechaNac">Fecha de nacimiento</string>
+    <string name="strTipoUsuario">Tipo de Usuario</string>
+    <string name="strBotonEditar">Guardar cambios</string>
+    <string name="strDescFab">Localización</string>
+    <string name="strSeleccionarTodos">Seleccionar todos</string>
+    <string name="strBorrarSeleccion">Borrar selección</string>
+    <string name="strEditarSeleccion">Editar seleccionado</string>
+</resources>

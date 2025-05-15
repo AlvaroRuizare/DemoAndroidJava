@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/iSeleccionarTodos"
+        android:title="@string/strSeleccionarTodos" />
+    <item android:id="@+id/iBorrarSeleccion"
+        android:title="@string/strBorrarSeleccion" />
+</menu>

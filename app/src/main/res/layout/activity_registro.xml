@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.Registro">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainCentrado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/main"
+        app:layout_constraintStart_toStartOf="@+id/main"
+        app:layout_constraintBottom_toBottomOf="@id/main"
+        app:layout_constraintTop_toTopOf="@id/main"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <!-- Boton Flotante -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabLocalizacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:contentDescription="@string/strDescFab"
+            app:fabCustomSize="60dp"
+            app:tint="@color/md_theme_onPrimary"
+            android:backgroundTint="@color/md_theme_primary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/tilUsuario"
+            app:srcCompat="@drawable/location"
+            android:visibility="gone"/>
+
+        <!-- Imagen -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/sivFoto"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/login"
+            android:tint="@color/md_theme_primary"
+            app:layout_constraintEnd_toEndOf="@+id/mainCentrado"
+            app:layout_constraintStart_toStartOf="@+id/mainCentrado"
+            app:layout_constraintBottom_toTopOf="@id/tilUsuario"
+            app:layout_constraintTop_toTopOf="@id/mainCentrado"
+            app:shapeAppearanceOverlay="@style/RoundedSquare">
+
+        </com.google.android.material.imageview.ShapeableImageView>
+
+        <!-- Campo usuario -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/usuario"
+            android:padding="5dp"
+            app:layout_constraintEnd_toEndOf="@+id/mainCentrado"
+            app:layout_constraintStart_toStartOf="@+id/mainCentrado"
+            app:layout_constraintBottom_toTopOf="@id/tilContrasena"
+            app:layout_constraintTop_toBottomOf="@id/sivFoto">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tietUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Campo contraseña -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilContrasena"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/strContrasena"
+            android:padding="5dp"
+            app:endIconMode="password_toggle"
+            app:layout_constraintEnd_toEndOf="@+id/mainCentrado"
+            app:layout_constraintStart_toStartOf="@+id/mainCentrado"
+            app:layout_constraintBottom_toTopOf="@id/tilContrasena2"
+            app:layout_constraintTop_toBottomOf="@id/tilUsuario">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tietContrasena"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Campo repetir contraseña -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilContrasena2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/strContrasena2"
+            android:padding="5dp"
+            app:endIconMode="password_toggle"
+            app:layout_constraintEnd_toEndOf="@+id/mainCentrado"
+            app:layout_constraintStart_toStartOf="@+id/mainCentrado"
+            app:layout_constraintBottom_toTopOf="@id/tilCorreo"
+            app:layout_constraintTop_toBottomOf="@id/tilContrasena">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tietContrasena2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Campo correo -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilCorreo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/strCorreo"
+            android:padding="5dp"
+            app:layout_constraintEnd_toEndOf="@+id/mainCentrado"
+            app:layout_constraintStart_toStartOf="@+id/mainCentrado"
+            app:layout_constraintBottom_toTopOf="@id/tilFechaNac"
+            app:layout_constraintTop_toBottomOf="@id/tilContrasena2">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tietCorreo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Campo fecha nacimiento -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilFechaNac"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/strFechaNac"
+            android:padding="5dp"
+            app:layout_constraintEnd_toEndOf="@+id/mainCentrado"
+            app:layout_constraintStart_toStartOf="@+id/mainCentrado"
+            app:layout_constraintBottom_toTopOf="@id/tilTipoUsuario"
+            app:layout_constraintTop_toBottomOf="@id/tilCorreo">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tietFechaNac"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:inputType="none" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Campo tipo usuario -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilTipoUsuario"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/strTipoUsuario"
+            android:padding="5dp"
+            app:layout_constraintEnd_toEndOf="@+id/mainCentrado"
+            app:layout_constraintStart_toStartOf="@+id/mainCentrado"
+            app:layout_constraintTop_toBottomOf="@id/tilFechaNac"
+            app:layout_constraintBottom_toTopOf="@id/msBaja">
+
+            <AutoCompleteTextView
+                android:id="@+id/actvTipoUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:labelFor="@id/actvTipoUsuario" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Switch -->
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/msBaja"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/mainCentrado"
+            app:layout_constraintStart_toStartOf="@id/mainCentrado"
+            app:layout_constraintTop_toBottomOf="@id/tilTipoUsuario"
+            app:layout_constraintBottom_toTopOf="@id/tvYaTengo"
+            android:text="Dar de baja">
+
+        </com.google.android.material.materialswitch.MaterialSwitch>
+
+        <!-- TextView ya tengo cuenta -->
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvYaTengo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="navegarHaciaAtras"
+            android:padding="15dp"
+            android:text="@string/strYaTengoCuenta"
+            android:textColor="@color/md_theme_tertiary"
+            android:textSize="@dimen/tamanoLetra"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/mainCentrado"
+            app:layout_constraintStart_toStartOf="@id/mainCentrado"
+            app:layout_constraintTop_toBottomOf="@id/msBaja"
+            app:layout_constraintBottom_toTopOf="@id/bCrearCuenta">
+
+        </com.google.android.material.textview.MaterialTextView>
+
+        <!-- Boton -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bCrearCuenta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="@color/md_theme_primary"
+            android:text="@string/strCrearCuenta"
+            android:textColor="@color/md_theme_onPrimary"
+            android:textSize="@dimen/tamanoLetra"
+            app:layout_constraintEnd_toEndOf="@id/mainCentrado"
+            app:layout_constraintStart_toStartOf="@id/mainCentrado"
+            app:layout_constraintBottom_toBottomOf="@id/mainCentrado"
+            app:layout_constraintTop_toBottomOf="@id/tvYaTengo">
+
+        </com.google.android.material.button.MaterialButton>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

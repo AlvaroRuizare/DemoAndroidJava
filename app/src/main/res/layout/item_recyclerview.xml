@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mcvListado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:cardBackgroundColor="@color/md_theme_primaryContainer"
+        android:layout_margin="8dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- ### COLUMNA IMAGEN ### -->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/sivUsuario"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/llColumnaDatos"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/baseline_person_24"
+                app:tint="@color/md_theme_onPrimaryContainer">
+
+            </com.google.android.material.imageview.ShapeableImageView>
+
+
+            <!-- ### COLUMNA DATOS ###  -->
+            <LinearLayout
+                android:id="@+id/llColumnaDatos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/mcbCheckbox"
+                app:layout_constraintStart_toEndOf="@id/sivUsuario"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <!-- NOMBRE USUARIO -->
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvNombreU"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/paddingTarjetaColumnaDatos"
+                    android:textColor="@color/md_theme_onPrimaryContainer"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:text="NOMBRE USUARIO" />
+
+                <!-- CORREO USUARIO -->
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvCorreoU"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/md_theme_onPrimaryContainer"
+                    tools:text="correo@gmail.com" />
+
+                <!-- TIPO DE USUARIO -->
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvTipoU"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/md_theme_onPrimaryContainer"
+                    tools:text="TipoUsuario" />
+
+                <!-- SEPARADOR DATOS -->
+                <com.google.android.material.divider.MaterialDivider
+                    android:id="@+id/mdSeparador"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/paddingDivider"
+                    android:visibility="invisible">
+
+                </com.google.android.material.divider.MaterialDivider>
+
+                <!-- FECHA NACIMIENTO USUARIO -->
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvFechaNacU"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/paddingTarjetaColumnaDatos"
+                    android:textColor="@color/md_theme_onPrimaryContainer"
+                    tools:text="26 Oct 2001" />
+
+            </LinearLayout>
+
+
+            <!-- ### COLUMNA CHECKBOX ###  -->
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/mcbCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                android:layout_marginEnd="20dp"
+                android:visibility="invisible"
+                tools:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/llColumnaDatos"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </com.google.android.material.checkbox.MaterialCheckBox>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tamanoLetra">17sp</dimen>
+    <dimen name="paddingTarjetaColumnaDatos">8sp</dimen>
+    <dimen name="paddingDivider">4sp</dimen>
+</resources>
